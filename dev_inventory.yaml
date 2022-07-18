@@ -1,0 +1,18 @@
+all:
+  hosts:       # ungrouped servers
+
+  children:    # groups
+    application:     # application group
+      hosts:
+        app_server1: 
+          ansible_host: 10.124.0.3
+          ansible_ssh_user: ansible
+    
+    database:
+      hosts:
+        db_server1:
+          ansible_host: 10.124.0.5
+          ansible_ssh_user: ansible
+
+      
+      

@@ -1,0 +1,9 @@
+---
+  - name: 
+    hosts: "{{ database_hosts }}"
+    gather_facts: "{{ facts }}"
+    vars_files:
+      - ../variables/database_vars.yaml
+    tasks:
+      - name: Ping
+        ping:
